@@ -21,7 +21,8 @@ app.use(cors());
 app.use(express.static("website"));
 
 // Setup Server
-listening = () => {
-  console.log("listening on port 3000");
-};
 app.listen(3000, listening);
+
+function listening() {
+  console.log("listening on port 3000");
+}
