@@ -26,3 +26,18 @@ app.listen(3000, listening);
 function listening() {
   console.log("listening on port 3000");
 }
+
+//get data by route api/getData
+app.get("/api/getData", function (req, res) {
+  res.send(projectData);
+});
+
+//get data by route api/postData
+app.post("/api/postData", function (req, res) {
+  const request = {
+    temprature: req.body.temprature,
+    date: req.body.date,
+    feeling: req.body.feeling,
+  };
+  projectData = request;
+});
